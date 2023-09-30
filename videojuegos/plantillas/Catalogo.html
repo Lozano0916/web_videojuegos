@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PortalGame</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/catalogo.css">
+  <script src="js/foundation.min.js"></script>
+  <style>
+      body {
+          margin: 0;
+          padding: 0;
+      }
+
+      .container {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+      }
+
+      .left-column {
+          flex: 1; 
+      }
+
+      .right-column {
+          flex-basis: 300px; 
+          margin-left: 20px; 
+      }
+
+      .card {
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 10px;
+          margin-bottom: 10px;
+      }
+
+      .card h2 {
+          font-size: 18px;
+      }
+
+      .ad {
+          background-color: steelblue;
+          border: 1px solid steelblue;
+          border-radius: 5px;
+          padding: 20px;
+          text-align: center;
+      }
+
+      .ad img {
+          max-width: 100%;
+      }
+      .button{
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+      }
+  </style>
+</head>
+
+<body>
+  <!-- Start Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">PortalGame</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="{% url 'inicio' %}">Inicio</a></li>
+        <li><a href="{% url 'catalogo' %}">Catalogo</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        <li><button type="button" class="shopping-cart-button float-right" data-toggle="shopping-cart-dropdown"><i
+              class="fa fa-shopping-cart"></i><span class="text"></span></button></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Top Bar -->
+
+ 
+
+    <div class="container">
+      <div class="left-column">
+        <!-- Tarjeta 1 -->
+        <div class="card">
+          <h2>GTA V</h2>
+          <p>Explora el impresionante mundo de Los Santos y el condado de Blaine en la experiencia ...</p>
+          <a href="{% url 'producto' %}" class="button">Ver mas</a>
+        </div>
+        
+        <div class="card">
+          <h2>Título de la Tarjeta</h2>
+          <p>Contenido corto de la tarjeta.</p>
+          <a href="#" class="button">Ver mas</a>
+        </div>
+
+        <div class="card">
+          <h2>Título de la Tarjeta</h2>
+          <p>Contenido corto de la tarjeta.</p>
+          <a href="#" class="button">Ver mas</a>
+        </div>
+
+        <div class="card">
+          <h2>Título de la Tarjeta</h2>
+          <p>Contenido corto de la tarjeta.</p>
+          <a href="#" class="button">Ver mas</a>
+        </div>
+
+        <div class="card">
+          <h2>Título de la Tarjeta</h2>
+          <p>Contenido corto de la tarjeta.</p>
+          <a href="#" class="button">Ver mas</a>
+        </div>
+      </div>
+    
+      <div class="right-column">
+        <h4>Ofertas especiales</h4>
+        <!-- Publicidad -->
+        <div class="ad">
+          <img src="https://juegosdigitalesbrasil.com/files/images/thumbs/productos_300x400_1651689052-ea-star-wars-triple-bundle-xbox-series-xs-0.jpg" alt="Publicidad">
+        </div>
+        <br>
+        <div class="ad">
+          <img
+            src="https://ps4digitalargentina.com/files/images/productos/1644518731-6-juegos-en-1-mega-pack-resident-ps5.jpg"alt="Publicidad">
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="shopping-cart-dropdown-pane">
+    <div class="dropdown-pane bottom " id="shopping-cart-dropdown" data-dropdown data-hover="true"
+      data-hover-pane="true">
+      <div class="shopping-cart-item">
+        <img src="https://i.pinimg.com/474x/ac/0d/e0/ac0de033023296347dcfcb1da62c9378.jpg" width="60" height="80">
+        <div class="shopping-cart-item-name">
+          <a>Game Pass</a>
+        </div>
+        <div class="shopping-cart-item-price">
+          <p class="shopping-cart-title">$90.000</p>
+          <a href="#">Eliminar</a>
+        </div>
+      </div>
+
+      <div class="shopping-cart-item">
+        <img src="https://scorpiobooks.co.nz/wp-content/uploads/9781913330019.jpg" width="60" height="80">
+        <div class="shopping-cart-item-name">
+          <a>ZELDA</a>
+        </div>
+        <div class="shopping-cart-item-price">
+          <p class="shopping-cart-title">$400.000</p>
+          <a href="#">Eliminar</a>
+        </div>
+      </div>
+
+      <div class="shopping-cart-item">
+        <img src="https://3mkstore.com/mk_content/uploads/2021/05/netflix-subscription-300x400.jpg" width="60"
+          height="80">
+        <div class="shopping-cart-item-name">
+          <a>Netflix</a>
+        </div>
+        <div class="shopping-cart-item-price">
+          <p class="shopping-cart-title">$35.000</p>
+          <a href="#">Eliminar</a>
+        </div>
+      </div>
+
+      <a href="#" class="button shopping-cart-checkout expanded">Pagar</a>
+
+    </div>
+  </div>
+
+  
+  <div class="callout large secondary">
+    <div class="row">
+      <div class="large-4 columns">
+        <h5>Sumérgete en la emoción de los videojuegos</h5>
+        <p>Bienvenido a PortalGame, tu destino definitivo para todo lo relacionado con los videojuegos. Nuestra pasión
+          por los juegos nos impulsa a ofrecerte una experiencia única. Desde los clásicos que despiertan nostalgia
+          hasta las
+          últimas innovaciones en la industria, estamos aquí para compartir nuestra emoción por el mundo del gaming.</p>
+      </div>
+      <div class="large-3 large-offset-2 columns">
+        <ul class="menu vertical">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+      <div class="large-3 columns">
+        <ul class="menu vertical">
+          <h5>Redes sociales</h5>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/6e6a67c425.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+
+</body>
+
+</html>
