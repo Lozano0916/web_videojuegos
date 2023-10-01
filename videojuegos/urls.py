@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.http import HttpResponse
 from django.contrib import admin
 from django.urls import path
 from videojuegos.views import bienvenida
@@ -28,3 +29,15 @@ urlpatterns = [
     path('producto/',producto, name='producto'),
     path('', views.inicio),
 ]
+# En urls.py
+
+
+def health_check(request):
+    # Agrega aquí cualquier lógica de verificación de estado necesaria
+    return HttpResponse(status=200)
+
+urlpatterns = [
+    # ... otras rutas de tu aplicación ...
+    path('healthcheck/', health_check, name='health_check'),
+]
+
